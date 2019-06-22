@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyPhotoBlog</string>
+
+    <string name="logo_login_page">Logo login Page</string>
+    <string name="your_email_here">Your Email Here</string>
+    <string name="password">Password</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_account_setting">Account Setting</string>
+    <string name="menu_logout">Logout</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="need_account">Need Account?</string>
+    <string name="login_account">Login Account</string>
+    <string name="confirm_password">confirm password</string>
+</resources>

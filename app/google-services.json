@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "272285975465",
+    "firebase_url": "https://photoblog-cb707.firebaseio.com",
+    "project_id": "photoblog-cb707",
+    "storage_bucket": "photoblog-cb707.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272285975465:android:2d915f0dc9b0a59d",
+        "android_client_info": {
+          "package_name": "com.diamong.myphotoblog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272285975465-k4neiulmqa45f83oktcuttjrj10p11cc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.diamong.myphotoblog",
+            "certificate_hash": "21f4a81630e501b3d8c5578a3d3afa5a67afb4c6"
+          }
+        },
+        {
+          "client_id": "272285975465-c30ic0o3hjcqjs54vho32jatdv77qatm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCym8k1lTIyDDc1RlkNwo7EjxyRyQay-rA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272285975465-c30ic0o3hjcqjs54vho32jatdv77qatm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
