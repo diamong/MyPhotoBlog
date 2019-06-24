@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerPasswordText = findViewById(R.id.register_password);
         registerConfirmPassword = findViewById(R.id.register_confirm_password);
         createAccountBtn = findViewById(R.id.register_btn);
-        registerLoginBtn = findViewById(R.id.login_reg_btn);
+        registerLoginBtn = findViewById(R.id.register_login_btn);
         registerProgressBar = findViewById(R.id.register_progressbar);
         registerProgressBar.setVisibility(View.INVISIBLE);
 
@@ -59,7 +59,10 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                                 if (task.isSuccessful()) {
-                                    sendToMain();
+
+                                    Intent setupIntent = new Intent(RegisterActivity.this,SetupActivity.class);
+                                    startActivity(setupIntent);
+                                    finish();
 
                                 } else {
                                     String errorMessage = task.getException().getMessage();
@@ -76,6 +79,13 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                 }
+            }
+        });
+
+        registerLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

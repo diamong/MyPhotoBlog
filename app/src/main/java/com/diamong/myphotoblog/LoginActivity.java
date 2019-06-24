@@ -24,11 +24,11 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar loginProgressBar;
 
     private void Init() {
-        loginEmailText = findViewById(R.id.register_email);
-        loginPasswordText = findViewById(R.id.register_password);
-        loginBtn = findViewById(R.id.register_login_btn);
+        loginEmailText = findViewById(R.id.login_email);
+        loginPasswordText = findViewById(R.id.login_password);
+        loginBtn = findViewById(R.id.login_btn);
         loginRegBtn = findViewById(R.id.login_reg_btn);
-        loginProgressBar = findViewById(R.id.register_progressbar);
+        loginProgressBar = findViewById(R.id.login_progressbar);
         loginProgressBar.setVisibility(View.INVISIBLE);
 
         mAuth = FirebaseAuth.getInstance();
@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent registerIntent = new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(registerIntent);
-                finish();
+
             }
         });
     }

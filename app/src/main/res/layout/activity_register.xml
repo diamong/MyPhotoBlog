@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/register_password" />
 
     <Button
-        android:id="@+id/login_register_btn"
+        android:id="@+id/register_login_btn"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
