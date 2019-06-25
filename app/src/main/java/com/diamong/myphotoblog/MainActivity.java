@@ -79,8 +79,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.bottom_menu_account:
                         replaceFragment(accountFragment);
                         return true;
+                    default:
+                        return false;
                 }
-                return false;
+
             }
         });
     }
