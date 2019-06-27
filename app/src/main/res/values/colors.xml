@@ -5,4 +5,6 @@
     <color name="colorAccent">#EF5350</color>
 
     <color name="white_half">#80ffffff</color>
+    <color name="like_btn_gray">#757070</color>
+    <color name="like_btn_accent">#EF5350</color>
 </resources>

@@ -59,4 +59,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <LinearLayout
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:id="@+id/blog_like_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/add_like_gray" />
+
+        <TextView
+            android:hint="blog like count"
+            android:layout_weight="1"
+            android:id="@+id/blog_like_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
 </LinearLayout>

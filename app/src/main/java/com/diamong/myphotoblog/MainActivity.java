@@ -40,14 +40,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mainToolbar);
         getSupportActionBar().setTitle("Photo Blog");
         addPostBtn = findViewById(R.id.add_post_btn);
-        mainBottomNavi = findViewById(R.id.main_bottom_navigation);
 
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
-        homeFragment = new HomeFragment();
-        notificationFragment = new NotificationFragment();
-        accountFragment = new AccountFragment();
+
     }
 
     @Override
@@ -56,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Init();
-
         addPostBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,26 +61,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mainBottomNavi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        if (mAuth.getCurrentUser() != null) {
+            mainBottomNavi = findViewById(R.id.main_bottom_navigation);
+            homeFragment = new HomeFragment();
+            notificationFragment = new NotificationFragment();
+            accountFragment = new AccountFragment();
 
-                switch (menuItem.getItemId()){
-                    case R.id.bottom_menu_home:
-                        replaceFragment(homeFragment);
-                        return true;
-                    case R.id.bottom_menu_notification:
-                        replaceFragment(notificationFragment);
-                        return true;
-                    case R.id.bottom_menu_account:
-                        replaceFragment(accountFragment);
-                        return true;
-                    default:
-                        return false;
+            replaceFragment(homeFragment);
+
+
+            mainBottomNavi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                    switch (menuItem.getItemId()) {
+                        case R.id.bottom_menu_home:
+                            replaceFragment(homeFragment);
+                            return true;
+                        case R.id.bottom_menu_notification:
+                            replaceFragment(notificationFragment);
+                            return true;
+                        case R.id.bottom_menu_account:
+                            replaceFragment(accountFragment);
+                            return true;
+                        default:
+                            return false;
+                    }
+
                 }
+            });
+        }
 
-            }
-        });
     }
 
     @Override
@@ -132,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_logout_menu:
+
                 mAuth.signOut();
                 sendToLogin();
                 return true;
@@ -148,5 +156,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_container, fragment);
         fragmentTransaction.commit();
+
     }
 }

@@ -3,13 +3,15 @@ package com.diamong.myphotoblog;
 
 import com.google.firebase.Timestamp;
 
-public class BlogPost {
+import java.util.Date;
+
+public class BlogPost extends BlogPostId {
     public String user_id,image_url,desc,thumb_image_url;
     //public Timestamp time_stamp;
-    public Timestamp time_stamp;
+    public Date time_stamp;
 
     public BlogPost(){}
-    public BlogPost(String user_id, String image_url, String desc, String thumb_image_url, Timestamp time_stamp) {
+    public BlogPost(String user_id, String image_url, String desc, String thumb_image_url, Date time_stamp) {
         this.user_id = user_id;
         this.image_url = image_url;
         this.desc = desc;
@@ -49,11 +51,11 @@ public class BlogPost {
         this.thumb_image_url = thumb_image_url;
     }
 
-    public Timestamp getTime_stamp() {
+    public Date getTime_stamp() {
         return time_stamp;
     }
 
-    public void setTime_stamp(Timestamp time_stamp) {
+    public void setTime_stamp(Date time_stamp) {
         this.time_stamp = time_stamp;
     }
 }
